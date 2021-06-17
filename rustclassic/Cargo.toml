@@ -1,0 +1,11 @@
+[package]
+name = "rustclassic"
+version = "0.1.0"
+authors = ["Zack"]
+edition = "2018"
+
+[dependencies]
+game-loop = "0.7.3"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+sdl2 = "0.34.5"
