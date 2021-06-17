@@ -6,8 +6,8 @@ use sdl2::video::Window as SDLWindow;
 use sdl2::{EventPump, Sdl};
 
 pub struct SdlWindow {
-    sdl: Sdl,
-    window: SDLWindow,
+    _sdl: Sdl,
+    _window: SDLWindow,
     event_pump: EventPump,
     close_window: bool,
 }
@@ -17,9 +17,9 @@ impl SdlWindow {
         let event_pump = sdl.event_pump()?;
 
         Ok(SdlWindow {
-            sdl,
-            window,
-            event_pump,
+            _sdl: sdl,
+            _window: window,
+            event_pump: event_pump,
             close_window: false,
         })
     }
